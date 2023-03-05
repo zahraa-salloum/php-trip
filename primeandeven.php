@@ -22,8 +22,14 @@ function isPrime($n)
    }
 $prime = isPrime($age);
 $even = isEven($age);
-if ($prime == 1 & $even == 0)
-echo 'Your age is prime and even.....'."\n";
-else
-echo 'Your age is not prime or not even......'."\n";
+if ($prime == 1 & $even == 0){
+  $response["Age"]="prime and even" ;
+  echo json_encode($response);
+}
+
+else{
+  $response["Age"]="not prime or not even" ;
+  echo json_encode($response);
+}
+
 ?>
