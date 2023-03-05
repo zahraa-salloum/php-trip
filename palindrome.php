@@ -6,7 +6,7 @@ function Palindrome($string) {
     $j = strlen($string) - 1;
     $palindrome = 0;
   
-    while($i > $j){
+    while($i < $j){
       if ($string[$j] != $string[$i]){
         $palindrome = 1;
         break;
@@ -16,11 +16,14 @@ function Palindrome($string) {
     }
   
     if ($palindrome == 0){
-      echo $string." is a Palindrome string.\n";
+      $response["String"]="is Palindrome" ;
+      echo json_encode($response);
     } else {
-      echo $string." is not a Palindrome string.\n";
+      $response["String"]="is not Palindrome" ;
+      echo json_encode($response);
     }
   }
+  
   Palindrome($_GET['string']);
 
 ?>
