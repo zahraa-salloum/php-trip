@@ -1,3 +1,4 @@
 <?php  
-echo 'Your IP Address is  '.$_SERVER['REMOTE_ADDR'];  
+$response['IP Address'] = $_SERVER['REMOTE_ADDR'];
+echo json_encode($response); 
 ?>  
