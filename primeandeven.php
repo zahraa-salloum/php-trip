@@ -22,7 +22,7 @@ function isPrime($n)
    }
 $prime = isPrime($age);
 $even = isEven($age);
-if ($prime == 1 & $even == 0){
+if ($prime == 1 && $even == 0){
   $response["Age"]="prime and even" ;
   echo json_encode($response);
 }
